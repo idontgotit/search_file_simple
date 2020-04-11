@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <style>
         .searchbar {
             margin-top: 25px;
@@ -75,7 +76,11 @@
     </form>
     <br/>
     {% for i in result %}
-        <a href="file:///{{ i.link }}">{{ i.file_name }}</a>
+        <div>
+            {{ forloop.counter }}> <a
+                href="{% url 'file_view' %}?link={{ i.link }}&file_name={{ i.file_name }}">{{ i.file_name }}</a>
+            <hr/>
+        </div>
     {% endfor %}
 </div>
 </body>

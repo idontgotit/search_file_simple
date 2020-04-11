@@ -4,4 +4,5 @@ from look_up_file import views
 urlpatterns = [
     path('', views.look_file, name='look_file'),
     path('search-file/', views.search_file, name='look_file'),
+    path('file_view/', views.file_view, name='file_view'),
 ]
