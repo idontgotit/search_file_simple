@@ -78,7 +78,7 @@
     {% for i in result %}
         <div>
             {{ forloop.counter }}> <a
-                href="{% url 'file_view' %}?link={{ i.link }}&file_name={{ i.file_name }}">{{ i.file_name }}</a>
+                href="{% url 'download_file' %}?link={{ i.link }}&file_name={{ i.file_name }}">{{ i.file_name }}</a>
             <hr/>
         </div>
     {% endfor %}

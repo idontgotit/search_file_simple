@@ -26,7 +26,7 @@ def search_file(request):
     return render(request, 'look_up_file.html', {"result": result})
 
 
-def file_view(request):
+def download_file(request):
     file_path = request.GET.get("link")
     file_name = request.GET.get("file_name")
     data = open(file_path, "rb").read()
