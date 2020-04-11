@@ -18,7 +18,7 @@ def search_file(request):
     if search_text:
         for file in os.listdir(str(current_path) + "/search_folder/"):
             if file.endswith(".docx"):
-                if search_text in file:
+                if str(search_text).upper() in str(file).upper():
                     result.append({
                         "file_name": file,
                         "link": os.path.join(str(current_path) + "/search_folder/", file)
